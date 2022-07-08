@@ -11,6 +11,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: docker build . -t katyi/nest-app
-    - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u ${{secterts.DOCKERHUB_USERNAME}} --password stdin
+    - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password stdin
     - run: docker push katyi/nest-app
-    
